@@ -2,10 +2,13 @@
 name = "abi"
 version = "0.1.0"
 edition = "2024"
+license = "Apache-2.0"
 
 [dependencies]
 prost = "0.14.1"
+prost-types = "0.14.1"
 tonic = { version = "0.14.1", features = ["gzip"] }
+tonic-prost = "0.14.1"
 
 [build-dependencies]
 tonic-prost-build = "0.14.1"

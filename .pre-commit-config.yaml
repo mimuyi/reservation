@@ -21,21 +21,21 @@ repos:
       - id: typos
   - repo: local
     hooks:
-      - id: cargo-fmt
-        name: cargo fmt
-        description: Format files with rustfmt.
-        entry: bash -c 'cargo fmt -- --check'
-        language: rust
-        files: \.rs$
-        args: []
-        # 依赖检查工具 cargo-deny
-      # - id: cargo-deny
-      #   name: cargo deny check
-      #   description: Check cargo dependencies
-      #   entry: bash -c 'cargo deny check'
+      # - id: cargo-fmt
+      #   name: cargo fmt
+      #   description: Format files with rustfmt.
+      #   entry: bash -c 'cargo fmt -- --check'
       #   language: rust
       #   files: \.rs$
       #   args: []
+        # 依赖检查工具 cargo-deny
+      - id: cargo-deny
+        name: cargo deny check
+        description: Check cargo dependencies
+        entry: bash -c 'cargo deny check'
+        language: rust
+        files: \.rs$
+        args: []
       - id: cargo-check
         name: cargo check
         description: Check the package for errors.
