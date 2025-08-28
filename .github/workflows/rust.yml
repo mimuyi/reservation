@@ -23,8 +23,8 @@ jobs:
     - name: install nextest
       uses: taiki-e/install-action@nextest
     - uses: Swatinem/rust-cache@v1
-    # - name: Check code format
-    #   run: cargo fmt -- --check
+    - name: Check code format
+      run: cargo fmt -- --check
     - name: Check the package for errors
       run: cargo check --all
     - name: Lint rust sources
